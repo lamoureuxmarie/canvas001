@@ -9,6 +9,8 @@ context.fillRect(100, 100, 400, 400)
 // fillRect is actually doing 3 things:
 // creating a new shape, drawing a rectangle and filling color
 // If we want to make a more complex shape, we need to give more isntructions
+context.lineWidth = 1
 context.beginPath()
-context.rect()
+context.arc(300, 300, 100, 0, 2 * Math.PI)
+// x, y, radius, starting angle and ending angle
 context.stroke()
