@@ -9,8 +9,22 @@ context.fillRect(100, 100, 400, 400)
 // fillRect is actually doing 3 things:
 // creating a new shape, drawing a rectangle and filling color
 // If we want to make a more complex shape, we need to give more isntructions
-context.lineWidth = 1
-context.beginPath()
-context.arc(300, 300, 100, 0, 2 * Math.PI)
-// x, y, radius, starting angle and ending angle
-context.stroke()
+// context.lineWidth = 1
+// context.beginPath()
+// context.arc(300, 300, 100, 0, 2 * Math.PI)
+// // x, y, radius, starting angle and ending angle
+// context.stroke()
+
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5; j++) {
+    let width = 70
+    let height = 70
+    let gap = 20
+    let x = 100 + (width + gap) * i
+    let y = 100 + (height + gap) * j
+    context.lineWidth = 2
+    context.beginPath()
+    context.rect(x, y, width, height)
+    context.stroke()
+  }
+}
